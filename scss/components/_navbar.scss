@@ -1,0 +1,5 @@
+@use '../util/' as util;
+
+h1{
+    color: util.$red;
+}
