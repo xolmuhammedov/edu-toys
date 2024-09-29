@@ -1,5 +1,57 @@
-@use '../util/' as util;
+    @use '../util/' as util;
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 1rem;
+        cursor: pointer;
+        .navbar__left{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 40%;
+            gap: 3rem;
+            img{
+                width: 90px;
+                height: 50px;
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                gap: 3rem;
+                li{
+                    font-family: util.$font-inter;
+                    list-style: none;
+                    font-size: 1.15vw;
+                    color: util.$gray;
+                }
+            }
+        }
+        .navbar__right{
+            .login{
+                width: 78px;
+                height: 38px;
+                font-size: 1vw;
+                border: none;
+                background-color: transparent;
+                a{
+                    list-style-type: none;
+                    text-decoration: none;
+                    color: util.$gray;
+                }
+            }
+            .signup{
+                width: 78px;
+                height: 38px;
+                font-size: 0.95vw;
+                color: white;
+                background-color: #7F56D9;
+                border-radius: 10px;
+                border: none;
+            }
+        }
+    }
 
-h1{
-    color: util.$red;
-}
+
