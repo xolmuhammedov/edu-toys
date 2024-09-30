@@ -1,11 +1,11 @@
-    @use '../util/' as util;
-    .navbar{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-top: 1rem;
-        cursor: pointer;
-        .navbar__left{
+@use '../util/' as util;
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    cursor: pointer;
+    .navbar__left{
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -15,25 +15,23 @@
                 width: 90px;
                 height: 50px;
             }
-            ul{
+            .list{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                width: 100%;
-                gap: 3rem;
                 li{
                     font-family: util.$font-inter;
                     list-style: none;
-                    font-size: 1.15vw;
+                    font-size: 1rem;
                     color: util.$gray;
                 }
             }
-        }
-        .navbar__right{
+    }
+    .navbar__right{
             .login{
                 width: 78px;
                 height: 38px;
-                font-size: 1vw;
+                font-size: 0.85rem;
                 border: none;
                 background-color: transparent;
                 a{
@@ -45,13 +43,18 @@
             .signup{
                 width: 78px;
                 height: 38px;
-                font-size: 0.95vw;
+                font-size: 0.80rem;
                 color: white;
                 background-color: #7F56D9;
                 border-radius: 10px;
                 border: none;
             }
-        }
     }
+}
 
+@media screen and (max-width:1000px){
 
+    .navbar__left .list{
+        width: 20px;
+    }
+}
